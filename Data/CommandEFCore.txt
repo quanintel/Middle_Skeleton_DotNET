@@ -1,0 +1,8 @@
+dotnet ef migrations add InitialCreate -c ApplicationDbContext -o Data/Migrations
+
+dotnet ef database update "InitialCreate" -c ApplicationDbContext
+
+dotnet ef migrations remove -c ApplicationDbContext 
+
+//Clean all database
+dotnet ef database update 0
